@@ -2,15 +2,13 @@ package com.eep.model;
 
 public class Escuela {
 	private String nombre;
-	private String direccion;
 
 	public Escuela() {
 
 	}
 
-	public Escuela(String nombre, String direccion) {
+	public Escuela(String nombre) {
 		this.nombre = nombre;
-		this.direccion = direccion;
 	}
 
 	public String getNombre() {
@@ -19,13 +17,5 @@ public class Escuela {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public String getDireccion() {
-		return direccion;
-	}
-
-	public void setDireccion(String direccion) {
-		this.direccion = direccion;
 	}
 }

@@ -7,29 +7,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.eep.model.Persona;
+import com.eep.model.Escuela;
 
 @Controller
-@RequestMapping("/ejemplos")
+@RequestMapping("/ejercicios")
 public class PasoNombreController {
-	final String plantillaPasoValor = "ejemplopasovalorcomplejo";
+	final String plantillaActividad2 = "actividad2";
 
-	@GetMapping("/hola")
+	@GetMapping("/ejercicio1")
 	public String helloWorld(Model model) {
-		Persona p1 = new Persona();
-		p1.setNombre("Sergio Aguirre");
-		p1.setEdad(19);
-		model.addAttribute("persona", p1);
-		return plantillaPasoValor;
+		Escuela eep = new Escuela();
+		eep.setNombre("EEP iGroup");
+		model.addAttribute("escuela", eep);
+		return plantillaActividad2;
 	}
 
-	@RequestMapping(value = "/holaaa", method = RequestMethod.GET)
+	@RequestMapping(value = "/ejercicio1mav", method = RequestMethod.GET)
 	public ModelAndView helloWorldMAV() {
-		Persona p2 = new Persona();
-		p2.setNombre("Mario Aguirre");
-		p2.setEdad(19);
-		ModelAndView mav = new ModelAndView(plantillaPasoValor);
-		mav.addObject("persona", p2);
+		ModelAndView mav = new ModelAndView(plantillaActividad2);
+		Escuela eep = new Escuela();
+		eep.setNombre("EEP iGroup");
+		mav.addObject("nombre", eep);
 		return mav;
 	}
 }
