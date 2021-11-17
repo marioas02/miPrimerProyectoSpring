@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo Paso Valor</title>
+</head>
+<body>
+	<h1>Ejemplo de paso de un listado desde un controller</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre: </th>
+				<th>Edad: </th>
+			</tr>
+		</thead>
+		<tbody th:each = "persona: ${personas}">
+			<tr>
+				<th th:text = "${persona.nombre}"></th>
+				<th th:text = "${persona.edad}"></th>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
