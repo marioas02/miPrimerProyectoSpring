@@ -2,15 +2,29 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Actividad 2 - Nombre</title>
-<link rel="stylesheet" href="/../static/css/style.css" type="text/css"/>
+<title>Nombre de la escuela</title>
+<style>
+	@import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
+
+	*{
+		font-family: 'Roboto', sans-serif;
+		margin: 15px 15px 15px 20px;
+		background-color: #AFAFAF;
+	}
+	h1{
+		text-align: center;
+	}
+	table{
+		border: 12px solid black;
+	}
+</style>
 </head>
 <body>
 	<h1>Actividad 1: Pasar el nombre de la escuela por un controlador.</h1>
 	<br>
 	<table>
 		<tr>
-			<th><h2>NOMBREa DE LA ESCUELA: <span th:text="${escuela.nombre}"></span></h2></th>
+			<th><h2>NOMBRE DE LA ESCUELA: <span th:text="${escuela.nombre}"></span></h2></th>
 		</tr>
 	</table>
 </body>

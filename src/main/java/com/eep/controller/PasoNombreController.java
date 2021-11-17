@@ -27,7 +27,7 @@ public class PasoNombreController {
 		ModelAndView mav = new ModelAndView(plantillaActividad2);
 		Escuela eep = new Escuela();
 		eep.setNombre("EEP iGroup");
-		mav.addObject("nombre", eep);
+		mav.addObject("escuela", eep);
 		return mav;
 	}
 }
