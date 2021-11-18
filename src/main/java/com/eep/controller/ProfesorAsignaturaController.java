@@ -15,6 +15,7 @@ import com.eep.model.Profesor;
 public class ProfesorAsignaturaController {
 	final String plantillaActividad2 = "actividad2";
 
+	// HOLAAA
 	@GetMapping("/ejercicio2")
 	public String actividad2(Model model) {
 		Asignatura asignatura1 = new Asignatura("Acceso a Datos", new Profesor("Mario", "Aguirre Sanz"));
