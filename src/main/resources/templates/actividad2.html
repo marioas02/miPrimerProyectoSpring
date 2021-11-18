@@ -20,7 +20,7 @@
 </style>
 </head>
 <body>
-	<h1>Actividad 1: Pasar el nombre de la escuela por un controlador.</h1>
+	<h1>Actividad 3: Nombre de los alumnos.</h1>
 	<br>
 	<table>
 		<tr>
@@ -30,6 +30,22 @@
 			<th><h2 style="color: #FFFFFF;">Asignatura: </h2><h2><span th:text="${asignatura.nombre}"></span></h2><h2 style="color: #FFFFFF;">
 			Profesor: </h2><h2><span th:text="${asignatura.profesorTitular.nombre}"></span><span th:text="${asignatura.profesorTitular.apellidos}"></span></h2></th>
 		</tr>
+	</table>
+
+	<th><h1>NOMBRE DE LOS ALUMNOS</h1></th>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre: </th>
+				<th>Apellidos: </th>
+			</tr>
+		</thead>
+		<tbody th:each = "alumno: ${alumnos}">
+			<tr>
+				<th th:text = "${alumno.nombre}"></th>
+				<th th:text = "${alumno.apellidos}"></th>
+			</tr>
+		</tbody>
 	</table>
 </body>
 </html>
