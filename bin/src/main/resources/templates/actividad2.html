@@ -20,7 +20,7 @@
 </style>
 </head>
 <body>
-	<h1>Actividad 2: Nombre del profesor y la asignatura.</h1>
+	<h1>Actividad 3: Nombre de los alumnos.</h1>
 	<br>
 	<table>
 		<tr>
@@ -31,5 +31,27 @@
 			Profesor: </h2><h2><span th:text="${asignatura.profesorTitular.nombre}"></span><span th:text="${asignatura.profesorTitular.apellidos}"></span></h2></th>
 		</tr>
 	</table>
+
+	<th><h1>NOMBRE DE LOS ALUMNOS</h1></th>
+	<table>
+		<thead>
+			<tr>
+				<th>Nombre: </th>
+				<th>Apellidos: </th>
+			</tr>
+		</thead>
+		<tbody th:each = "alumno: ${alumnos}">
+			<tr>
+				<th th:text = "${alumno.nombre}"></th>
+				<th th:text = "${alumno.apellidos}"></th>
+			</tr>
+		</tbody>
+	</table>
+	<hr>
+	<h2>PRIMERA PRUEBA, CON LOS PARAMETROS EN EL LINK. A</h2>
+	<p>EL ANIMAL ES: NOMBRE: <span th:text="${animal.nombre}"/> TIENE UNA EDAD DE: <span th:text="${animal.edad}"></span> AÑOS, ES DE RAZA: <span th:text="${animal.raza}"></span> Y EL CÓDIGO DEL CHIP ES: <span th:text="${animal.codigoChip}"></span>.</p>
+	<hr>
+	<h2>SEGUNDA PRUEBA, CON LOS PARAMETROS EN EL LINK. B</h2>
+	<p>EL ANIMAL ES: NOMBRE: <span th:text="${animal.nombre}"/> TIENE UNA EDAD DE: <span th:text="${animal.edad}"></span> AÑOS, ES DE RAZA: <span th:text="${animal.raza}"></span> Y EL CÓDIGO DEL CHIP ES: <span th:text="${animal.codigoChip}"></span>.</p>
 </body>
 </html>
